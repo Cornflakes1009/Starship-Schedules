@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Starship Scheduler</title>
+</head>
+
+<body>
+    <div class="container clear">
+        <div class="jumbotron jumbotron-fluid card-color">
+            <div class="container text-center">
+                <h1 class="display-4">Starship Scheduler</h1>
+                <p class="lead header-font">See and modify ship times below.</p>
+            </div>
+        </div>
+        <div class="card card-color">
+            <div class="card-header header-font">
+                Ship Info
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ship</th>
+                            <th scope="col">Frequency</th>
+                            <th scope="col">Arrival</th>
+                            <th scope="col">Time Remaining</th>
+                            <th scope="col">Passage Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card card-color mt-4">
+            <div class="card-header header-font">
+                Featured
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="">Ship Name</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ship Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Destination</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="">First Ship Time</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First Ship TIme">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Frequency (min)</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Frequency">
+                    </div>
+                    <div class="form-group">
+                            <label for="">Federation Credit Cost</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cost">
+                        </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/logic.js"></script>
+</body>
+
+</html>

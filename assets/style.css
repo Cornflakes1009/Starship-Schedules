@@ -1,0 +1,27 @@
+body { 
+    background: url('images/star-ship.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+  }
+  /* @font-face {
+    font-family: StarFont;
+    src: url("star.ttf");
+} */
+h1 {
+    font-family: 'Play', sans-serif;
+    font-size: 5.5rem !important;
+}
+.clear {
+    opacity: 0.9;
+  }
+.card-color {
+    background-color: #4f5f77;
+  }
+.header-font {
+    font-size: 25px;
+}
+  
+/* #5e6877 - alternative background color*/
