@@ -1,4 +1,4 @@
-
+$(function () {
 
 
 var config = {
@@ -37,5 +37,5 @@ $("#submit-button").on('click', function (event) {
         $('#ship-board').append("<tr>" + '<td>' + childSnapshot.val().ship + '</td>' + '<td>' + childSnapshot.val().destination + '</td>' + '<td>' + childSnapshot.val().firstShip + '</td>' + '<td>' + childSnapshot.val().frequency + '</td>' + '<td>' + childSnapshot.val().cost + '</td>' + '</tr>');
     });
 })
-$(function () {
+
 }); // end of document ready
