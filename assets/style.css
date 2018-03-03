@@ -17,11 +17,19 @@ h1 {
 .clear {
     opacity: 0.9;
   }
+  .form-control::-webkit-input-placeholder {
+      opacity: 0.4;
+  }
 .card-color {
     background-color: #4f5f77;
   }
 .header-font {
     font-size: 25px;
 }
-  
+#th-font {
+    font-size: 18px;
+}
+.rounded-corners {
+    border-radius: 5px;
+}
 /* #5e6877 - alternative background color*/

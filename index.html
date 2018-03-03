@@ -9,12 +9,13 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <title>Starship Scheduler</title>
 </head>
 
 <body>
     <div class="container clear">
-        <div class="jumbotron jumbotron-fluid card-color">
+        <div class="jumbotron jumbotron-fluid card-color rounded-corners">
             <div class="container text-center">
                 <h1 class="display-4">Starship Scheduler</h1>
                 <p class="lead header-font">See and modify ship times below.</p>
@@ -26,7 +27,7 @@
             </div>
             <div class="card-body">
                 <table class="table">
-                    <thead>
+                    <thead id="th-font">
                         <tr>
                             <th scope="col">Ship</th>
                             <th scope="col">Frequency</th>
@@ -35,7 +36,7 @@
                             <th scope="col">Passage Cost</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id='ship-board'>
                         <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
@@ -43,20 +44,7 @@
                             <td>@mdo</td>
                             <td>@mdo</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@mdo</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -69,25 +57,25 @@
                 <form>
                     <div class="form-group">
                         <label for="">Ship Name</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ship Name">
+                        <input type="text" class="form-control" id="ship" placeholder="Ship Name">
                     </div>
                     <div class="form-group">
                         <label for="">Destination</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Destination">
+                        <input type="text" class="form-control" id="destination" placeholder="Destination">
                     </div>
                     <div class="form-group">
                         <label for="">First Ship Time</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First Ship TIme">
+                        <input type="text" class="form-control" id="first-ship" placeholder="First Ship TIme">
                     </div>
                     <div class="form-group">
                         <label for="">Frequency (min)</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Frequency">
+                        <input type="text" class="form-control" id="frequency" placeholder="Frequency">
                     </div>
                     <div class="form-group">
                             <label for="">Federation Credit Cost</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cost">
+                            <input type="text" class="form-control" id="cost" placeholder="Cost">
                         </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="text-center btn btn-primary" id="submit-button" onSubmit="return false;">Submit</button>
                 </form>
             </div>
         </div>
