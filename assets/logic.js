@@ -13,32 +13,13 @@ $(function () {
     var ship = "";
     var destination = '';
     var firstShip = $("#first-ship").val();
-    var frequency = '';
+    var frequency = $("#frequency").val().trim();
+    var minUntilShip;
 
-    
 
 
 
     database.ref().on('child_added', function (childSnapshot) {
-    /////
-    var tr = $("<tr>");
-    console.log('firstShip is ' + firstShip);
-    var firstShipConverted = moment(firstShip, "hh:mm").subtract("1, years");
-    console.log("first ship converted is " + firstShipConverted);
-    var currentTime = moment();
-    // the time difference between current time and the first train
-    var difference = moment().diff(moment(firstShipConverted), "minutes");
-    console.log("the difference is " + difference);
-    var remainder = difference % frequency;
-    console.log("the remainder is " + remainder);
-    var minUntilShip = frequency - remainder;
-    console.log("minutes until ship is " + minUntilShip);
-    moment(minUntilShip).minutes();
-    var nextArrival = moment().add(minUntilShip, "minutes").format("hh:mm a");
-    tr.append("<td>" + nextArrival + "</td>");
-    tr.append("<td>" + minUntilShip + "</td>");
-    /////
-
         $('#ship-board').append("<tr class='removable'>" + '<td>' + childSnapshot.val().ship + '</td>' + '<td>' + childSnapshot.val().destination + '</td>' + '<td>' + childSnapshot.val().frequency + '</td>' + '<td>' + childSnapshot.val().firstShip + '</td>' + '<td>' + childSnapshot.val().minUntilShip + '</td>' + '</tr>');
     });
 
@@ -49,6 +30,25 @@ $(function () {
         firstShip = $("#first-ship").val(); // removed .trim()
         console.log(firstShip);
         frequency = $("#frequency").val().trim();
+        console.log(frequency);
+        /////
+        //var tr = $("<tr>");
+        //console.log('firstShip is ' + firstShip);
+        var firstShipConverted = moment(firstShip, "hh:mm").subtract("1, years");
+        //console.log("first ship converted is " + firstShipConverted);
+        var currentTime = moment();
+        // the time difference between current time and the first train
+        var difference = moment().diff(moment(firstShipConverted), "minutes");
+        //console.log("the difference is " + difference);
+        var remainder = difference % frequency;
+        //console.log("the remainder is " + remainder);
+        minUntilShip = frequency - remainder;
+        //console.log("minutes until ship is " + minUntilShip);
+        moment(minUntilShip).minutes();
+        var nextArrival = moment().add(minUntilShip, "minutes").format("hh:mm a");
+        // tr.append("<td>" + nextArrival + "</td>");
+        // tr.append("<td>" + minUntilShip + "</td>");
+        /////
 
         if (ship !== '' && destination !== '' && firstShip !== '' && frequency !== '') {
 
@@ -57,7 +57,7 @@ $(function () {
                 destination: destination,
                 firstShip: firstShip,
                 frequency: frequency,
-                // minUntilShip: minUntilShip
+                minUntilShip: minUntilShip
             });
         } else {
             alert('Please make sure you fill out all fields. Thank you!');
