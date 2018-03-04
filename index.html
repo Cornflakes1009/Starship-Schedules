@@ -31,15 +31,15 @@
                     <thead id="th-font">
                         <tr>
                             <th scope="col">Ship</th>
-                            <th scope="col">Frequency</th>
-                            <th scope="col">Arrival</th>
-                            <th scope="col">Time Remaining</th>
-                            <th scope="col">Passage Cost</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
                         </tr>
                     </thead>
                     <tbody id='ship-board'>
-                        
-                        
+
+
                     </tbody>
                 </table>
             </div>
@@ -66,11 +66,7 @@
                         <label for="">Frequency (min)</label>
                         <input type="number" class="form-control" id="frequency" placeholder="Frequency" required>
                     </div>
-                    <div class="form-group">
-                            <label for="">Federation Credit Cost</label>
-                            <input type="text" class="form-control" id="cost" placeholder="Cost" required>
-                        </div>
-                        <button type="button" class="text-center btn btn-primary" id="submit-button" onSubmit="return false;">Submit</button>
+                    <button type="button" class="text-center btn btn-primary" id="submit-button" onSubmit="return false;">Submit</button>
                 </form>
             </div>
         </div>
