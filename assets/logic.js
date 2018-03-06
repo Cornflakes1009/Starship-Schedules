@@ -20,7 +20,7 @@ $(function () {
 
 
     database.ref().on('child_added', function (childSnapshot) {
-        $('#ship-board').append("<tr class='removable'>" + '<td>' + childSnapshot.val().ship + '</td>' + '<td>' + childSnapshot.val().destination + '</td>' + '<td>' + childSnapshot.val().frequency + '</td>' + '<td>' + childSnapshot.val().firstShip + '</td>' + '<td>' + childSnapshot.val().minUntilShip + '</td>' + '</tr>');
+        $('#ship-board').append("<tr class='removable'>" + '<td>' + childSnapshot.val().ship + '</td>' + '<td>' + childSnapshot.val().destination + '</td>' + '<td>' + childSnapshot.val().frequency + '</td>' + '<td>' + childSnapshot.val().nextArrival + '</td>' + '<td>' + childSnapshot.val().minUntilShip + '</td>' + '</tr>');
     });
 
     $("#submit-button").on('click', function (event) {
@@ -57,6 +57,7 @@ $(function () {
                 destination: destination,
                 firstShip: firstShip,
                 frequency: frequency,
+                nextArrival: nextArrival,
                 minUntilShip: minUntilShip
             });
         } else {
