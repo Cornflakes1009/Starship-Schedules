@@ -20,32 +20,22 @@ $(function () {
     var firstShip = $("#first-ship").val();
 
     var frequency = $("#frequency").val().trim();
-    //console.log("freq", frequency);
+    
     var minUntilShip;
 
     function calculateTime(childSnapShot) {
-        /////
-
-        //var tr = $("<tr>");
-        //console.log('firstShip is ' + firstShip);
-        var firstShipConverted = moment(childSnapShot.val().firstShip, "hh:mm").subtract("1", "years");
-        //console.log("first ship converted is " + firstShipConverted);
-
         
-        // the time difference between current time and the first train
-        //console.log(firstShipConverted);
+        var firstShipConverted = moment(childSnapShot.val().firstShip, "hh:mm").subtract("1", "years");
+       
         var difference = moment().diff(moment(firstShipConverted), "minutes");
-        // console.log('first ship ', firstShip);
-        // console.log("the difference is " + difference);
+        
         var remainder = difference % childSnapShot.val().frequency;
         console.log("the remainder is " + remainder);
         minUntilShip = childSnapShot.val().frequency - remainder;
-        //console.log("minutes until ship is " + minUntilShip);
+        
         moment(minUntilShip).minutes();
         var nextArrival = moment().add(minUntilShip, "minutes").format("hh:mm a");
-        // tr.append("<td>" + nextArrival + "</td>");
-        // tr.append("<td>" + minUntilShip + "</td>");
-        /////
+        
         
         var result = {
             minUntilShip: minUntilShip,
@@ -62,7 +52,7 @@ $(function () {
         event.preventDefault();
         ship = $("#ship").val().trim();
         destination = $("#destination").val().trim();
-        firstShip = $("#first-ship").val(); // removed .trim()
+        firstShip = $("#first-ship").val().trim();
         console.log(firstShip);
         frequency = $("#frequency").val().trim();
         console.log(frequency);
@@ -86,15 +76,6 @@ $(function () {
         $("#first-ship").val('');
         $("#frequency").val('');
     })
-
-    function removeTableRow() {
-        var ask = confirm('Are you sure you want to delete this entry?');
-        if (ask === true) {
-            (this).remove();
-            // need to remove item from database
-            return false;
-        }
-    };
 
     $(document).on("click", ".removable", removeTableRow);
 }); // end of document ready
