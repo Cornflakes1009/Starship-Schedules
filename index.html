@@ -22,55 +22,62 @@
                 <p class="lead header-font">See and modify ship times below.</p>
             </div>
         </div>
-        <div class="card card-color">
-            <div class="card-header header-font">
-                Ship Info
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-color schedules-block">
+                    <div class="card-header header-font">
+                        Ship Info
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead id="th-font">
+                                <tr>
+                                    <th scope="col">Ship</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" id='ship-board'>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <table class="table">
-                    <thead id="th-font">
-                        <tr>
-                            <th scope="col">Ship</th>
-                            <th scope="col">Destination</th>
-                            <th scope="col">Frequency (min)</th>
-                            <th scope="col">Next Arrival</th>
-                            <th scope="col">Minutes Away</th>
-                        </tr>
-                    </thead>
-                    <tbody class =""id='ship-board'>
 
 
-                    </tbody>
-                </table>
+            <div class="col-md-6 form-block">
+                <div class="card card-color">
+                    <div class="card-header header-font">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="">Ship Name</label>
+                                <input type="text" class="form-control" id="ship" placeholder="Ship Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Destination</label>
+                                <input type="text" class="form-control" id="destination" placeholder="Destination" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">First Ship Time</label>
+                                <input type="time" class="form-control" id="first-ship" placeholder="First Ship TIme" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Frequency (min)</label>
+                                <input type="number" class="form-control" id="frequency" placeholder="Frequency" required>
+                            </div>
+                            <button type="button" class="text-center btn btn-primary" id="submit-button" onSubmit="return false;">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card card-color mt-4 mb-4">
-            <div class="card-header header-font">
-                Featured
-            </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label for="">Ship Name</label>
-                        <input type="text" class="form-control" id="ship" placeholder="Ship Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Destination</label>
-                        <input type="text" class="form-control" id="destination" placeholder="Destination" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">First Ship Time</label>
-                        <input type="time" class="form-control" id="first-ship" placeholder="First Ship TIme" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Frequency (min)</label>
-                        <input type="number" class="form-control" id="frequency" placeholder="Frequency" required>
-                    </div>
-                    <button type="button" class="text-center btn btn-primary" id="submit-button" onSubmit="return false;">Submit</button>
-                </form>
-            </div>
-        </div>
-
 
     </div>
 

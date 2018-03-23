@@ -6,12 +6,7 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Play', sans-serif;
-    
   }
-  /* @font-face {
-    font-family: StarFont;
-    src: url("star.ttf");
-} */
 h1 {
     font-family: 'Play', sans-serif;
 }
@@ -37,8 +32,47 @@ h1 {
 .jumbotron {
     margin-bottom: 0rem;
 }
-
-
+.card {
+    height: 475px !important;
+}
+.schedules-block {
+    overflow: auto;
+}
+@media only screen and (max-width: 1199px) {
+    #th-font {
+        font-size: 14px;
+    }
+    tr {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    #th-font {
+        font-size: 9px;
+    }
+    tr {
+        font-size: 9px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .form-block {
+        margin-top: 25px;
+    }
+    #th-font {
+        font-size: 14px;
+    }
+    tr {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 468px) {
+    #th-font {
+        font-size: 11px;
+    }
+    tr {
+        font-size: 11px;
+    }
+}
 
 
 @media only screen and (max-width: 400px) {
@@ -58,9 +92,9 @@ h1 {
           font-size: 16px;
       }
       #th-font {
-          font-size: 9px;
+          font-size: 11px;
       }
       #ship-board {
-          font-size: 10px;
+          font-size: 11px;
       }
 }
